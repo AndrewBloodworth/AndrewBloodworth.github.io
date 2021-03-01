@@ -52,7 +52,7 @@ html, body {
     width: 100%;
 }
 .logo-img-container {
-    background-image: url("/Users/andrewbloodworth/projects/codeRepo/AndrewBloodworth.github.io/Resources/Images/WhitePNG.png");
+    background-image: url("../AndrewBloodworth.github.io/Resources/Images/WhitePNG.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
