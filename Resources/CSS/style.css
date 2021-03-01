@@ -30,11 +30,12 @@ html, body {
 .top-nav li {
     list-style-type: none;
     margin: 20px;
+    color: white;
 }
 
 .main-container {
     display: grid;
-    height: 100%;
+    height: calc(100% - 75px);
     width: 100%;
     grid-template: 1fr / 270px 4fr;
 }
@@ -71,7 +72,6 @@ html, body {
 .side-bar-nav {
     height: 400px;
     width: 100%;
-    border-bottom: 2px solid whitesmoke;
 }
 
 .main-nav {
@@ -132,23 +132,35 @@ html, body {
     grid-template: 1fr / 1fr;
     grid-auto-columns: 1fr;
     grid-auto-rows: 1fr;
+    height: 100%;
     width: 100%;
-    grid-gap: 20px;
+}
+.boxes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .box {
-    width: 100%;
-    height: 100px;
-    border: 1px solid red;
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+    background-color: white;
 }
 .banner {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 730px; 
+    height: calc(100vh - 75px); 
+    min-height: 500px;
     width: 100%;
     background-color: whitesmoke;
 }
 .banner-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
     height: 100%; 
     width: 100%;
 }
