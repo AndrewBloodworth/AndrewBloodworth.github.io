@@ -32,15 +32,9 @@ class HospitalEmployee {
       this.certifications.push(newCertification);
     }
   }
-  
-  const nurseOlynyk = new Nurse('Olynyk', ['Trauma','Pediatrics']);
-  nurseOlynyk.takeVacationDays(5);
-  console.log(nurseOlynyk.remainingVacationDays);
-  nurseOlynyk.addCertification('Genetics');
-  console.log(nurseOlynyk.certifications);
-  HospitalEmployee.generatePassword()
 
-  
+
+
   class libraryItem {
     constructor(title) {
       this._title = title;
@@ -89,26 +83,8 @@ class HospitalEmployee {
       return this._pages;
     }
   }
-  
   const warAndPeace = new book('Leo Tolstoy','War and Peace', 1225)
-  
-  console.log(warAndPeace.title);
-  
-  console.log(warAndPeace.ratings);
-  console.log(warAndPeace.getAverageRating());
-  warAndPeace.addRating(5);
-  warAndPeace.addRating(2);
-  warAndPeace.addRating(3);
-  console.log(warAndPeace.getAverageRating());
-  
-  console.log(warAndPeace.isCheckedOut);
-  warAndPeace.toggleCheckOutStatus();
-  console.log(warAndPeace.isCheckedOut);
-  
-  console.log(warAndPeace.author);
-  console.log(warAndPeace.pages);
-  
-  
+
   class movie extends libraryItem {
     constructor(director, title, runTime) {
       super(title);
@@ -122,25 +98,7 @@ class HospitalEmployee {
       return this._runTime;
     }
   }
-  
   const incredibles = new movie('Brad Bird','The Incredibles', 116)
-  
-  console.log(incredibles.title);
-  
-  console.log(incredibles.ratings);
-  console.log(incredibles.getAverageRating());
-  incredibles.addRating(5);
-  incredibles.addRating(2);
-  incredibles.addRating(3);
-  console.log(incredibles.getAverageRating());
-  
-  console.log(incredibles.isCheckedOut);
-  incredibles.toggleCheckOutStatus();
-  console.log(incredibles.isCheckedOut);
-  
-  console.log(incredibles.director);
-  console.log(incredibles.runTime);
-  
   
   class cd extends libraryItem {
     constructor(artist, title, songs) {
@@ -155,22 +113,67 @@ class HospitalEmployee {
       return this._songs;
     }
   }
-  
   const porterRobinson = new cd('Porter Robinson','Worlds', ['song1','song2','song3']);
   
-  console.log(porterRobinson.title);
+  class School {
+    constructor(name, level, numberOfStudents) {
+      this._name = name;
+      this._level = level;
+      this._numberOfStudents= numberOfStudents;
+    }
+    get name() {
+      return this._name;
+    }
+    get level() {
+      return this._level;
+    }
+    get numberOfStudents() {
+      return this._numberOfStudents;
+    }
+    set numberOfStudents(num) {
+      if (typeof num === 'number') {
+        this._numberOfStudents = num;
+      } else {
+        console.log('Invalid input: numberOfStudents must be set to a Number.');
+      }
+      
+    }
+    quickFacts() {
+      console.log(`${this._name} educates ${this._numberOfStudents} students at the ${this._level} school level.`)
+    }
+    static pickSubstituteTeacher(substituteTeachers) {
+      let rNum = Math.floor(Math.random() * substituteTeachers.length);
+      return substituteTeachers[rNum];
+    }
+  }
+  const mySchool = new School('Dakota Ridge', 'high', 500);
   
-  console.log(porterRobinson.ratings);
-  console.log(porterRobinson.getAverageRating());
-  porterRobinson.addRating(5);
-  porterRobinson.addRating(2);
-  porterRobinson.addRating(3);
-  console.log(porterRobinson.getAverageRating());
+  class Primary extends School {
+    constructor(name, numberOfStudents, pickupPolicy) {
+      super(name, 'primary', numberOfStudents);
+      this._pickupPolicy = pickupPolicy;
+    }
+    get pickupPolicy() {
+      return this._pickupPolicy
+    }
+  }
+  const pSchool = new Primary('Dakota Ridge', 500, "Pick yo kids up");
   
-  console.log(porterRobinson.isCheckedOut);
-  porterRobinson.toggleCheckOutStatus();
-  console.log(porterRobinson.isCheckedOut);
+  class Middle extends School {
+    constructor(name, numberOfStudents) {
+      super(name, 'middle', numberOfStudents);
+    }
+  }
+  const mSchool = new Middle('Dakota Ridge', 500);
+  mSchool.quickFacts();
   
-  console.log(porterRobinson.artist);
-  console.log(porterRobinson.songs);
-  
+  class High extends School {
+    constructor(name, numberOfStudents, sportsTeams) {
+      super(name, 'high', numberOfStudents);
+      this._sportsTeams = sportsTeams;
+    }
+    get sportsTeams() {
+      return this._sportsTeams
+    }
+  }
+  const hSchool = new High('Dakota Ridge', 500, ['football','basketball','baseball']);
