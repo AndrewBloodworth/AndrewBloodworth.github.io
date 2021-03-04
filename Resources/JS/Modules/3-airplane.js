@@ -15,7 +15,7 @@ const makeAirplane = (name, availableStaff, fuelCap) => {
     return (availableStaff.length >= requiredStaff.length) ? true : false;
   }
   //Exporting variables and objects 
-  export { availableAirplanes, flightRequirements, meetsStaffRequirements };
+  export { availableAirplanes, flightRequirements, meetsStaffRequirements as meetStaffReq};
   
   
   

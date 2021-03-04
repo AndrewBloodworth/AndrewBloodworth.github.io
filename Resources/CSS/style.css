@@ -194,10 +194,7 @@ h1, h2, a, p {
     justify-content: center;
     align-items: center;
 }
-.tour:hover {
-    color: #0e1111;
-    background-color: whitesmoke;
-}
+
 .tour a:hover {
     color: #0e1111;
     background-color: whitesmoke;
@@ -284,6 +281,60 @@ h1, h2, a, p {
     display: flex;
     justify-content: flex-end;
     width: 100%;
+}
+.half-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.half-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+}
+.half-page h3,
+.half-page p {
+    width: 100%;
+    text-align: left;
+}
+.half-page h3 {
+    font-size: 30px;
+    margin: 0;
+    margin-top: 10px;
+}
+.blackbox {
+    background-color: #0e1111;
+    width: 100%;
+    height: 100%;
+}
+.why {
+    background-color: whitesmoke;
+    color: #0e1111;
+    border: 1px solid #0e1111;
+    height: 60px;
+    width: 210px;
+}
+.why a {
+    color: #0e1111;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.why a:hover {
+    color: whitesmoke;
+    background-color: #0e1111;
+}
+.spacer {
+    margin-top: 50px;
 }
 .fullscreen {
     height: calc(100vh - 75px);

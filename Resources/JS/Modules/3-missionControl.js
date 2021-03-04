@@ -1,5 +1,5 @@
 //Importing variables and objects
-import { availableAirplanes, flightRequirements, meetsStaffRequirements } from './3-airplane';
+import { availableAirplanes, flightRequirements, meetsStaffReq } from './3-airplane';
 
 const displayFuelCapacity = () => {
   availableAirplanes.forEach(function(element) {
@@ -10,7 +10,7 @@ displayFuelCapacity();
 
 function displayStaffStatus() {
   availableAirplanes.forEach(function(element){
-    console.log(element.name + ' meets staff requirements: ' + meetsStaffRequirements(element.availableStaff, flightRequirements.requiredStaff) );
+    console.log(element.name + ' meets staff requirements: ' + meetsStaffReq(element.availableStaff, flightRequirements.requiredStaff) );
   });
 }
 displayStaffStatus()
