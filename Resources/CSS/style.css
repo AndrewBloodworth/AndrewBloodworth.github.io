@@ -511,7 +511,10 @@ footer {
         display: none;
 
     }
-
+    .h-item {
+        width: calc((100vw - 80px) );
+        height: 400px;
+    }
     .side-bar-logo {
     justify-content: center;
     width: 100%;
