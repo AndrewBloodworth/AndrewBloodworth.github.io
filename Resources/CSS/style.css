@@ -532,8 +532,8 @@ footer {
   /* width */
   .horizontal-container::-webkit-scrollbar {
     height: 9px;
-    position: fixed;
-
+    -webkit-appearance: none;
+    width: 7px;
   }
   
   /* Track */
@@ -545,6 +545,8 @@ footer {
   /* Handle */
   .horizontal-container::-webkit-scrollbar-thumb {
     background: #0e1111;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
   }
   
   /* Handle on hover */
