@@ -193,3 +193,151 @@ class HospitalEmployee {
   } catch(e) {
     console.log(e);
   }
+
+
+
+
+
+  //Tests with Mocha
+
+  /*
+  EXAMPLE Package.json
+  {
+  "name": "learn-mocha-intro-start",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+
+  "scripts": {
+    "test": "mocha"
+  },
+
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^3.5.3"
+  }
+}
+*/
+
+  describe('Math', () => {
+    describe('.min', () => {
+      it('returns the argument with the lowest value', () => {
+  
+      })
+    })
+  })
+
+  // import assert here
+const assert = require('assert');
+
+describe('+', () => {
+  it('returns the sum of its arguments', () => {
+    // Write assertion here
+    assert.ok(3 + 4 === 8);
+  });
+});
+
+// Naive approach
+describe('.pop', () => {
+  it('returns the last element in the array [naive]', () => {
+    assert.ok(['padawan', 'knight'].pop() === 'knight'); 
+  });
+});
+
+// 3 phase approach
+describe('.pop', () => {
+  it('returns the last element in the array [3phase]', () => {
+    // Setup
+    const knightString = 'knight';
+    const jediPath = ['padawan', knightString];
+
+    // Exercise
+    const popped = jediPath.pop();
+
+    // Verify
+    assert.ok(popped === knightString);
+  });
+});
+
+const fs = require('fs');
+
+describe('appendFileSync', () => {
+  it('writes a string to text file at given path name', () => {
+
+    // Setup
+    const path = './message.txt';
+    const str = 'Hello Node.js';
+    
+    // Exercise: write to file
+    fs.appendFileSync(path, str);
+
+    // Verify: compare file contents to string
+    const contents = fs.readFileSync(path);
+    assert.ok(contents.toString() === str);
+
+    // Teardown: delete path
+    fs.unlinkSync(path);
+  });
+});
+
+
+describe('appendFileSync', () => {
+  const path = './message.txt';
+  //The other hooks in the Mocha library 
+  //are before(), beforeEach(), and after()
+  afterEach( () => {
+    // Teardown: delete path
+    fs.unlinkSync(path);
+  })
+
+  it('writes a string to text file at given path name', () => {
+
+    // Setup
+    const str = 'Hello Node.js';
+    
+    // Exercise: write to file
+    fs.appendFileSync(path, str);
+
+    // Verify: compare file contents to string
+    const contents = fs.readFileSync(path);
+    assert.ok(contents.toString() === str);
+
+
+  });
+});
+
+//assert strictEqual
+describe('-', () => {
+  it('returns the difference of two values', () => {
+    const bigNum = 100;
+		const smallNum = 4;
+		const expected = 96;
+    
+    const result =  bigNum - smallNum;
+
+    // Write assertion here
+    assert.strictEqual(result, expected);
+  });
+});
+
+//assert deepEqual - This is will check into the object 
+//and evaluate if the inside is the same b/c
+//objects are not considered the same.
+
+describe('+', () => {
+  it('returns the sum of two values', () => {
+    // Setup
+		let expected = {a: 3, b: 4, result: 7};
+		let sum = {a: 3, b: 4};
+
+    // Exercise
+		sum.result = sum.a + sum.b;
+
+    // Verify
+    assert.deepEqual(sum, expected);
+  });
+});
+
+
+//https://nodejs.org/api/assert.html
