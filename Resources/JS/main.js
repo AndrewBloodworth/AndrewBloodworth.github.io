@@ -177,3 +177,19 @@ class HospitalEmployee {
     }
   }
   const hSchool = new High('Dakota Ridge', 500, ['football','basketball','baseball']);
+
+
+  //Error Handling
+
+  //Does not stop the program.
+  Error('Error text.')
+  
+  //Stops the program.
+  throw Error('Error text.')
+
+  //Try catch
+  try {
+    throw Error('My error');
+  } catch(e) {
+    console.log(e);
+  }
