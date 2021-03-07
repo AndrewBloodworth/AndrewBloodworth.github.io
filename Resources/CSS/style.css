@@ -545,8 +545,7 @@ footer {
   /* Handle */
   .horizontal-container::-webkit-scrollbar-thumb {
     background: #0e1111;
-    border-radius: 4px;
-    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+
   }
   
   /* Handle on hover */
