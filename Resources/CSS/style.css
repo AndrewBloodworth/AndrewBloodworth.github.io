@@ -365,18 +365,46 @@ h1, h2, a, p {
 .fullscreen {
     height: calc(100vh - 75px);
 }
+.ref-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.ref-title button {
+    background-color: #0e1111;
+    color: whitesmoke;
+    border: 1px solid #0e1111;
+    margin-top: 4px;
+    margin-left: 20px;
+}
+
+.ref-title button:active {
+    color: #0e1111;
+    background-color: whitesmoke;
+    box-shadow: 0 4px #0e1111;
+    transform: translateY(4px);
+  }
+  .ref-title button:focus {
+      outline: none;
+  }
+#add-ref-confirmation {
+    margin-top: 20px;
+    margin-left: 20px;
+}
 .section-tite {
     font-size: 30px;
     margin-left: 20px;
-    margin-bottom: 0;
+
 }
+
 .horizontal-container {
     display: flex;
     justify-content: flex-start;
     align-content: flex-start;
-    margin-top: 30px;
+    margin-top: 0px;
     margin-bottom: 30px;
-    margin: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
     overflow-x: scroll;
 }
 

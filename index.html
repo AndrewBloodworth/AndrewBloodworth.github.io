@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">>
+    -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
     <title>Code Repo</title>
     <!--Fonts-->
     
     <!--CSS-->
     <link rel="stylesheet" href="Resources/CSS/style.css" type="text/css">
+    <!--JS-->
+    <script src="Resources/JS/index.js" defer></script>
 </head>
 <body>
     <header>
@@ -72,9 +77,13 @@
                     </div>
                 </div>
             </div>
-            <h2 class="section-tite">References</h2>
+            <div class="ref-title" id="refTitle">
+                <h2 class="section-tite">References</h2>
+                <button class="button-border-radius" id="ref-button">Add</button>
+                <p id="add-ref-confirmation"></p>
+            </div>
             <div class="horizontal-container">
-                <div class="h-item-container">
+                <div class="h-item-container" id="reference">
                     <div class="h-item">
                         <div class="swipe-box">
                             <h3>Reference #1</h3>
